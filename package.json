@@ -1,0 +1,24 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx webpack --config webpack.config.js",
+    "watch": "npx webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kenedy-Henrique/Restaurant-Page.git"
+  },
+  "author": "Kenedy-Henrique",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kenedy-Henrique/Restaurant-Page/issues"
+  },
+  "homepage": "https://github.com/Kenedy-Henrique/Restaurant-Page#readme",
+  "devDependencies": {
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
+}

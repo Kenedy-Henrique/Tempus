@@ -106,7 +106,19 @@ eval("__webpack_require__.r(__webpack_exports__);\nfunction insertHeader(content
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header */ \"./src/header.js\");\n\n\nlet contentDiv = document.querySelector('.content');\n\nObject(_header__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(contentDiv);\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header */ \"./src/header.js\");\n/* harmony import */ var _navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./navbar */ \"./src/navbar.js\");\n\n\n\nlet contentDiv = document.querySelector('.content');\n\nObject(_header__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(contentDiv);\nObject(_navbar__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(contentDiv);\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/navbar.js":
+/*!***********************!*\
+  !*** ./src/navbar.js ***!
+  \***********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nfunction navBar(contentDiv) {\n    let introDiv = document.createElement('div');\n    let intro = document.createElement('button');\n    let menu = document.createElement('button');\n    let about = document.createElement('button');\n\n    introDiv.style.display = 'flex';\n    introDiv.style.gap = '3vw';\n    introDiv.style.justifyContent = 'center';\n\n    intro.innerHTML = 'Intro';\n    intro.style.fontFamily = 'Quicksand';\n    intro.style.fontSize = '3vw';\n    intro.style.border = 'none';\n    intro.style.backgroundColor = 'white';\n    intro.style.color = 'rgb(207, 154, 41)';\n    intro.addEventListener(\"mouseover\", () => intro.style.color = 'rgb(125, 35, 60)');\n    intro.addEventListener(\"mouseout\", () => intro.style.color = 'rgb(207, 154, 41)');\n\n    menu.innerHTML = 'Menu';\n    menu.style.fontFamily = 'Quicksand';\n    menu.style.fontSize = '3vw';\n    menu.style.border = 'none';\n    menu.style.backgroundColor = 'white';\n    menu.style.color = 'rgb(207, 154, 41)';\n    menu.addEventListener(\"mouseover\", () => menu.style.color = 'rgb(125, 35, 60)');\n    menu.addEventListener(\"mouseout\", () => menu.style.color = 'rgb(207, 154, 41)');\n\n    about.innerHTML = 'About';\n    about.style.fontFamily = 'Quicksand';\n    about.style.fontSize = '3vw';\n    about.style.border = 'none';\n    about.style.backgroundColor = 'white';\n    about.style.color = 'rgb(207, 154, 41)';\n    about.addEventListener(\"mouseover\", () => about.style.color = 'rgb(125, 35, 60)');\n    about.addEventListener(\"mouseout\", () => about.style.color = 'rgb(207, 154, 41)');\n    \n    introDiv.appendChild(intro);\n    introDiv.appendChild(menu);\n    introDiv.appendChild(about);\n    contentDiv.appendChild(introDiv);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (navBar);\n\n//# sourceURL=webpack:///./src/navbar.js?");
 
 /***/ })
 

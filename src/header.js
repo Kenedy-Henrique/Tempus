@@ -1,8 +1,14 @@
 function insertHeader(contentDiv){
     let header = document.createElement('header');
+    header.style.width = '80vw';
+    header.style.position = 'relative';
+    header.style.top = '1vw';
+    header.style.left = '50%';
+    header.style.transform = 'translateX(-50%)';
     header.style.display = 'flex';
     header.style.alignItems = 'center';
     header.style.justifyContent = 'center';
+    header.style.backgroundColor = 'white';
     contentDiv.appendChild(header);
 
     let logoImage = document.createElement('img');

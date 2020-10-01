@@ -4,7 +4,7 @@ function insertIntro(contentDiv){
     let introDivText = document.createElement('p');
 
     introDiv.style.position = 'relative';
-    introDiv.style.top = '1vw';
+    introDiv.style.top = '4.5vw';
     introDiv.style.backgroundColor = 'white';
     introDiv.style.width = '80vw';
     introDiv.style.height = '150vw';
@@ -15,10 +15,12 @@ function insertIntro(contentDiv){
     introDivText.style.fontSize = '2vw';
     introDivText.style.padding = '2vw';
     introDivText.style.textAlign = 'center';
-    introDivText.innerHTML = 'The better place if you are looking for the best of the best wine.';
+    introDivText.innerHTML = 'The best place if you are looking for the best of the best wine.';
 
     introDiv.appendChild(introDivText);
     contentDiv.appendChild(introDiv);
+
+    return introDiv;
 }
 
 export default insertIntro;

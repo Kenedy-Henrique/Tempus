@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx webpack --config webpack.config.js",
-    "watch": "npx webpack --watch webpack.config.js"
+    "build": "npx webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",

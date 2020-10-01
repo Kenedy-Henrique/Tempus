@@ -22,11 +22,7 @@ function animationLineMechanics(pastState, presentState){
                 fill: "forwards"
             })
         }
-    }
-
-
-
-    if(pastState === 'menuDiv'){
+    } else if(pastState === 'menuDiv'){
         if(presentState === 'introDiv'){
             animationLine.animate([
                 { left: menuPostion},
@@ -44,11 +40,7 @@ function animationLineMechanics(pastState, presentState){
                 fill: "forwards"
             })
         }
-    }
-
-
-
-    if(pastState === 'aboutDiv'){
+    } else if(pastState === 'aboutDiv'){
         if(presentState === 'menuDiv'){
             animationLine.animate([
                 { left: aboutPostion},

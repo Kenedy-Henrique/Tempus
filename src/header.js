@@ -9,6 +9,7 @@ function insertHeader(contentDiv){
     header.style.alignItems = 'center';
     header.style.justifyContent = 'center';
     header.style.backgroundColor = 'white';
+    header.style.boxShadow = '0px 0px 3px 1px rgba(0, 0, 0, .2)';
     contentDiv.appendChild(header);
 
     let logoImage = document.createElement('img');
@@ -29,8 +30,8 @@ function insertHeader(contentDiv){
     now.innerHTML = 'now';
     now.style.paddingLeft = '5px';
     now.style.paddingRight = '5px';
-	now.style.fontFamily = 'Playfair Display';
-	now.style.fontSize = '2.4vw';
+    now.style.fontFamily = 'Playfair Display';
+    now.style.fontSize = '2.4vw';
     now.style.color = 'rgb(125, 35, 60)';
     mainPElement.appendChild(now);
 

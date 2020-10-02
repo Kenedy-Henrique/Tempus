@@ -1,5 +1,7 @@
 function insertMenu(contentDiv){
     let menu = document.createElement('div');
+    menu.classList.add('menuDiv');
+
     menu.style.position = 'relative';
     menu.style.display = 'flex';
     menu.style.flexWrap = 'wrap';
@@ -65,36 +67,61 @@ function insertMenu(contentDiv){
 
     for(let i=0; i<=9; i++){
         let product = document.createElement('div');
-        let image = document.createElement('img');
+        let wineImage = document.createElement('img');
         let namePTag = document.createElement('p');
         let pricePTag = document.createElement('p');
+        let shoppingCartButton = document.createElement('button');
 
         product.style.width = '15vw';
         product.style.height = '15vw';
         product.style.position = 'relative';
         product.style.top = '3vw';
         product.style.borderRadius = '10px';
-        product.addEventListener("mouseover", () => product.style.backgroundColor = /*'2px solid rgb(125, 35, 60)'*/`rgba(207, 154, 41, 0.349)`);
-        product.addEventListener("mouseout", () => product.style.backgroundColor = 'white');
+        product.style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
+        product.style.boxShadow = '12px 12px 2px 1px rgba(0, 0, 255, .2)';
+        product.addEventListener("mouseover", () => {
+            /*product.style.backgroundColor = `rgba(125, 35, 60, 0.349)`;*/
+            product.style.transform = 'scale(1.1)';
+            /*product.style.backgroundColor = 'rgba(207, 154, 41, 0.349)';*/
+        });
+        product.addEventListener("mouseout", () => {
+            /*product.style.backgroundColor = 'rgba(207, 154, 41, 0.349)';*/
+            product.style.transform = 'scale(1.0)';
+            /*product.style.backgroundColor = 'rgba(0, 0, 0, 0.1)';*/
+        });
 
-        image.src = products[i].imageLocation;
-        image.style.position = 'relative';
-        image.style.left = '1vw';
-        image.style.top = '2vw';
+        wineImage.src = products[i].imageLocation;
+        wineImage.style.position = 'relative';
+        wineImage.style.left = '1vw';
+        wineImage.style.top = '2vw';
+        wineImage.style.height = '11vw';
+        wineImage.style.width = 'auto';
+
+        shoppingCartButton.style.backgroundImage = 'url(../src/assets/shopping-cart-svgrepo-com.svg)';
+        shoppingCartButton.style.position = 'relative';
+        shoppingCartButton.style.left = '2vw';
+        shoppingCartButton.style.border = 'none';
+        shoppingCartButton.style.borderRadius = '20%';
+        shoppingCartButton.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+        shoppingCartButton.style.width = '2vw';
+        shoppingCartButton.style.height = '2vw';
 
         namePTag.innerHTML = products[i].name;
         namePTag.style.position = 'absolute';
         namePTag.style.top = '3vw';
         namePTag.style.left = '5.5vw';
-        namePTag.style.fontFamily = 'Quicksand';
+        namePTag.style.fontFamily = 'Playfair Display';
+        namePTag.style.fontSize = '1.5vw';
 
         pricePTag.innerHTML = products[i].price;
         pricePTag.style.position = 'absolute';
-        pricePTag.style.top = '7vw';
-        pricePTag.style.left = '5.5vw';
+        pricePTag.style.top = '10.4vw';
+        pricePTag.style.left = '8vw';
         pricePTag.style.fontFamily = 'Quicksand';
+        pricePTag.style.fontSize = '1.5vw';
 
-        product.appendChild(image);
+        product.appendChild(wineImage);
+        product.appendChild(shoppingCartButton);
         product.appendChild(namePTag);
         product.appendChild(pricePTag);
         products[i] = product;

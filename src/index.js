@@ -1,14 +1,16 @@
 import insertHeader from './header';
-import makeNavBar from './navbar';
+import insertNavBar from './navbar';
 import insertIntro from './intro';
 import insertMenu from './menu';
+import insertAbout from './about';
+import animationLineMechanics from './animationLineMechanics';
 
 let contentDiv = document.querySelector('.content');
 
-document.body.style.backgroundImage = 'url(../src/assets/spikes.png)';
+/*document.body.style.backgroundImage = 'url(../src/assets/spikes.png)';*/
 
 insertHeader(contentDiv);
-makeNavBar(contentDiv);
+insertNavBar(contentDiv);
 
 let currentContent = insertIntro(contentDiv);
 
@@ -17,16 +19,25 @@ let menuBtn = document.querySelector('.menuBtn');
 let aboutBtn = document.querySelector('.aboutBtn');
 
 introBtn.addEventListener('click', () => {
+    let pastState = currentContent.className;
     contentDiv.removeChild(currentContent);
     currentContent = insertIntro(contentDiv);
-    
+    let presentState = currentContent.className;
+    animationLineMechanics(pastState, presentState);
 });
 
 menuBtn.addEventListener('click', () => {
+    let pastState = currentContent.className;
     contentDiv.removeChild(currentContent);
     currentContent = insertMenu(contentDiv);
+    let presentState = currentContent.className;
+    animationLineMechanics(pastState, presentState);
 });
 
 aboutBtn.addEventListener('click', () => {
-
+    let pastState = currentContent.className;
+    contentDiv.removeChild(currentContent);
+    currentContent = insertAbout(contentDiv);
+    let presentState = currentContent.className;
+    animationLineMechanics(pastState, presentState);
 });

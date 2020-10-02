@@ -1,7 +1,7 @@
 function animationLineMechanics(pastState, presentState){
     let animationLine = document.querySelector('.animationLine');
     let introPostion = '7.65vw';
-    let menuPostion = '19vw';
+    let menuPostion = '19.3vw';
     let aboutPostion = '31.3vw';
 
     if(pastState === 'introDiv'){

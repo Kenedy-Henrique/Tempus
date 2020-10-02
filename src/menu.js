@@ -112,6 +112,7 @@ function insertMenu(contentDiv){
         namePTag.style.left = '5.5vw';
         namePTag.style.fontFamily = 'Playfair Display';
         namePTag.style.fontSize = '1.5vw';
+        namePTag.style.color = 'rgba(0, 0, 0, .7)';
 
         pricePTag.innerHTML = products[i].price;
         pricePTag.style.position = 'absolute';

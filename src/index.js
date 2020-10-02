@@ -7,8 +7,6 @@ import animationLineMechanics from './animationLineMechanics';
 
 let contentDiv = document.querySelector('.content');
 
-/*document.body.style.backgroundImage = 'url(../src/assets/spikes.png)';*/
-
 insertHeader(contentDiv);
 insertNavBar(contentDiv);
 

@@ -12,30 +12,33 @@ insertNavBar(contentDiv);
 
 let currentContent = insertIntro(contentDiv);
 
+let pastState;
+let presentState;
+
 let introBtn = document.querySelector('.introBtn');
 let menuBtn = document.querySelector('.menuBtn');
 let aboutBtn = document.querySelector('.aboutBtn');
 
 introBtn.addEventListener('click', () => {
-    let pastState = currentContent.className;
+    pastState = currentContent.className;
     contentDiv.removeChild(currentContent);
     currentContent = insertIntro(contentDiv);
-    let presentState = currentContent.className;
+    presentState = currentContent.className;
     animationLineMechanics(pastState, presentState);
 });
 
 menuBtn.addEventListener('click', () => {
-    let pastState = currentContent.className;
+    pastState = currentContent.className;
     contentDiv.removeChild(currentContent);
     currentContent = insertMenu(contentDiv);
-    let presentState = currentContent.className;
+    presentState = currentContent.className;
     animationLineMechanics(pastState, presentState);
 });
 
 aboutBtn.addEventListener('click', () => {
-    let pastState = currentContent.className;
+    pastState = currentContent.className;
     contentDiv.removeChild(currentContent);
     currentContent = insertAbout(contentDiv);
-    let presentState = currentContent.className;
+    presentState = currentContent.className;
     animationLineMechanics(pastState, presentState);
 });
